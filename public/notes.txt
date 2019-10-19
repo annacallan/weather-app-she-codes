@@ -1,0 +1,5 @@
+Short cuts for ES7 extension
+
+rafc + tab creates an arrow function
+
+rcc + tab creates a class component
