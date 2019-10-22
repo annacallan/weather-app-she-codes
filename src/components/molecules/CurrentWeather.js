@@ -1,13 +1,18 @@
 import React from 'react';
+import CurrentCity from '../atoms/CurrentCity';
+import ChangeCityButton from '../atoms/ChangeCityButton';
+import CurrentTemperature from '../atoms/CurrentTemperature';
 
-const CurrentWeather = ({city, temperature, ...props}) => {
-    return (
-        <div>
-            <div>{city}</div>
-            <div>{temperature}</div>
-        </div>
-    );
+const CurrentWeather = () => {
+  return (
+    <div>
+      <CurrentCity />
+      <ChangeCityButton />
+      <CurrentTemperature />
+    </div>
+  );
 };
+
 
 export default CurrentWeather;
 

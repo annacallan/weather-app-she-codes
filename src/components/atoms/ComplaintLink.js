@@ -1,11 +1,12 @@
 import React from 'react'
 
-const ComplaintLink = () => {
+const ComplaintLink = ({ ...props }) => {
     return (
-        <div>
-            
-        </div>
-    )
-}
+      <div>
+        <p>Don't like the weather?</p>
+        <button>Complain to the weather person!</button>
+      </div>
+    );
+  };
 
-export default ComplaintLink
+export default ComplaintLink;

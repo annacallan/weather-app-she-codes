@@ -1,11 +1,12 @@
 import React from 'react'
 
-const BackLink = () => {
+const BackLink = ({ onButtonClick, ...props }) => {
     return (
-        <div>
-            
-        </div>
-    )
-}
+      <div>
+        <button onClick={onButtonClick}>Actually Nevermind!</button>
+      </div>
+    );
+  };
+  
 
 export default BackLink

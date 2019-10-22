@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Avatar from '../atoms/Avatar';
+import Profile from '../atoms/Profile';
 
 const WeatherPerson = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div>
+      <Avatar />
+      <Profile />
+    </div>
+  );
+};
+
 
 export default WeatherPerson
