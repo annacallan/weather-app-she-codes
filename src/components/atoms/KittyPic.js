@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import CatPhoto from '../../images/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg'
 
-const KittyPic = ({photo, ...props}) => {
+const KittyPic = ({image, ...props}) => {
     return (
-        <div>
-            {photo}
+        <div className="catPhoto">
+        <img src={CatPhoto} alt="cat mood" />
         </div>
-    )
+        )
 }
 
 export default KittyPic

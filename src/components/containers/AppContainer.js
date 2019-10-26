@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { CURRENT_WEATHER, HOURLY_FORECAST } from '../../data/mockWeather'
 import WeatherPage from '../pages/WeatherPage'
 import ComplaintPage from '../pages/ComplaintPage'
 import KittyPage from '../pages/KittyPage'
 import { Route } from 'react-router-dom';
 
-const CITIES = ['London', 'Paris', 'Perth', 'Tokyo', 'Sydney'];
+const CITIES = ['Perth', 'London', 'Paris', 'Tokyo', 'Sydney'];
+
+const API_URL = 'https://api.openweathermap.org/data/2.5';
 
 class AppContainer extends Component {
     constructor(props) {
@@ -13,19 +14,64 @@ class AppContainer extends Component {
   
       this.state = {
         city: CITIES[0],
-        temperature: CURRENT_WEATHER.main.temp,
-        forecast: HOURLY_FORECAST.list
+        temperature: '',
+        forecast: [],
       };
   
-    this.changeCity = this.changeCity.bind(this);
+      this.handleCityChange = this.handleCityChange.bind(this);
+    }
+  
+    fetchApiData() {
+      fetch(
+        `${API_URL}/weather?q=${this.state.city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+      ) // Call the fetch function passing the url of the API as a parameter
+        .then(response => {
+          console.log(response);
+          return response.json();
+          // Your code for handling the data you get from the API
+        })
+        .then(data => {
+          console.log(data);
+          this.setState({ temperature: data.main.temp });
+        })
+        .catch(function(err) {
+          console.error(err);
+          // This is where you run code if the server returns any errors
+        });
+    }
+  
+    fetchForecast() {
+      fetch(
+        `${API_URL}/forecast?q=${this.state.city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+      )
+        .then(response => {
+            console.log(response);
+            return response.json();
+            // Your code for handling the data you get from the API
+          })
+          .then(data => {
+            console.log(data);
+            this.setState({ forecast: data.list });
+          })
+        .catch(err => {
+          console.error(err);
+        });
     }
   
     getRandomCity(array) {
       return array[Math.floor(Math.random() * array.length)];
     }
   
-    changeCity() {
-      this.setState({ city: this.getRandomCity(CITIES) });
+    handleCityChange() {
+      this.setState({ city: this.getRandomCity(CITIES) }, () => {
+        this.fetchApiData();
+        this.fetchForecast();
+      });
+    }
+  
+    componentDidMount() {
+      this.fetchApiData();
+      this.fetchForecast();
     }
   
     render() {
@@ -37,7 +83,7 @@ class AppContainer extends Component {
             city={this.state.city}
             temperature={this.state.temperature}
             forecast={this.state.forecast}
-            changeCity={this.changeCity}
+            changeCity={this.handleCityChange}
           />
             )
         }}
@@ -50,7 +96,7 @@ class AppContainer extends Component {
           <ComplaintPage
             city={this.state.city}
             temperature={this.state.temperature}
-            changeCity={this.changeCity}
+            changeCity={this.handleCityChange}
           />
                )
         }}

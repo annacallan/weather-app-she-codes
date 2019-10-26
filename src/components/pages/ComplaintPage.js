@@ -3,16 +3,14 @@ import TextLink from '../atoms/TextLink';
 import WeatherPerson from '../molecules/WeatherPerson';
 import ComplaintForm from '../organisms/ComplaintForm';
 import PageTemplate from '../templates/PageTemplate';
-import { CURRENT_WEATHER } from '../../data/mockWeather';
+import { Link } from 'react-router-dom';
 
-const ComplaintPage = () => {
+const ComplaintPage = ({ city, temperature, changeCity, ...props }) => {
   return (
-    <PageTemplate
-      city={CURRENT_WEATHER.name}
-      temperature={CURRENT_WEATHER.main.temp}
-      changeCity={() => console.log('Change the city!')}
-    >
-      <TextLink>I changed my mind!</TextLink>
+    <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
+      <Link to="/">
+        <TextLink>I changed my mind!</TextLink>
+      </Link>
       <WeatherPerson />
       <ComplaintForm />
     </PageTemplate>

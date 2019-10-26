@@ -1,7 +1,7 @@
 import React from 'react';
 import KittyMood from '../atoms/KittyMood';
 import KittyPic from '../atoms/KittyPic';
-import TextLink from '../atoms/TextLink';
+import { Link } from 'react-router-dom';
 
 const KittyProfile = ({mood, photo, ...props}) => {
     return (
@@ -9,7 +9,7 @@ const KittyProfile = ({mood, photo, ...props}) => {
             <h2>Today's Cat Mood</h2>
             < KittyPic />
             < KittyMood />
-            < TextLink> Back to the weather </TextLink>
+            <Link to="/">Back to the weather!</Link>
         </div>
     )
 }
