@@ -1,14 +1,16 @@
 import React from 'react';
-import WeatherPage from './components/pages/WeatherPage';
-import ComplaintPage from './components/pages/ComplaintPage';
+import AppContainer from './components/containers/AppContainer';
+import './App.css';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-      <WeatherPage />
-      <ComplaintPage />
+    <Router>
+    <div className='appClass'>
+      <AppContainer />
     </div>
+  </Router>
   );
 }
 

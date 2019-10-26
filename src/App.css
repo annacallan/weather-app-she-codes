@@ -1,0 +1,72 @@
+.appClass {
+    text-align: center;
+    background-color: teal;
+    color: white;
+    width: 400px;
+}
+
+.profilePic {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.currentWeatherClass {
+    border: solid 1px red;
+}
+
+.dailyWeatherClass {
+    border: solid 1px yellow;
+}
+
+.formClass {
+    border: solid 1px yellowgreen;
+    display: block;
+}
+
+/* .profilePic {
+    width: 10%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 50px;
+    border: solid white;
+      border-width:6px 6px 60px 6px;
+      box-shadow:2px 2px 5px #333; 
+      -webkit-box-shadow:1px 1px 5px #333;
+      -moz-box-shadow:1px 1px 5px #333;
+      height:10px; 
+      width:10px;
+      font-family: "Marker Felt", sans-serif; 
+      text-decoration: none;
+      -webkit-transform: rotate(+5deg);
+      -moz-transform: rotate(+5deg);
+      color: black;
+      text-shadow: none;
+      border-radius: 5px;
+  }
+  
+  .polaroid:hover {
+      -webkit-transform: scale(1.20); 
+      -moz-transform: scale(1.20); 
+      -webkit-box-shadow: 0 8px 16px 0 black; 
+      -moz-box-shadow: 0 8px 16px black; 
+      position: relative; 
+      z-index: 5;
+  } */
+
+
+  /* .textLinkClass {                     
+    text-decoration: none;    
+    color: whitesmoke;                
+    background-color:#006161; 
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+    width: 20px;
+    margin: auto;
+  }
+
+  .buttonClass {
+      color: yellow;
+      background-color: tomato;
+  } */
