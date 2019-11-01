@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 const WeatherPage = ({ city, temperature, changeCity, forecast, ...props }) => {
   return (
     <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
-      <Forecast forecast={forecast} />;
+      <Forecast forecast={forecast} />
       <Link to="/complain">Complain about the weather!</Link>
+      <br></br>
       <Link to="/catmood">Cat Forecast</Link>
     </PageTemplate>
   );

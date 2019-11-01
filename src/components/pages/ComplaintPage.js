@@ -5,14 +5,14 @@ import ComplaintForm from '../organisms/ComplaintForm';
 import PageTemplate from '../templates/PageTemplate';
 import { Link } from 'react-router-dom';
 
-const ComplaintPage = ({ city, temperature, changeCity, ...props }) => {
+const ComplaintPage = ({ city, temperature, changeCity, handleSubmit, ...props }) => {
   return (
     <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
       <Link to="/">
         <TextLink>I changed my mind!</TextLink>
       </Link>
       <WeatherPerson />
-      <ComplaintForm />
+      <ComplaintForm onSubmit={handleSubmit} />
     </PageTemplate>
   );
 };

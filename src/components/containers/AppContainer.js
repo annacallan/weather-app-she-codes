@@ -61,13 +61,25 @@ class AppContainer extends Component {
     getRandomCity(array) {
       return array[Math.floor(Math.random() * array.length)];
     }
-  
+    
+
     handleCityChange() {
       this.setState({ city: this.getRandomCity(CITIES) }, () => {
         this.fetchApiData();
         this.fetchForecast();
       });
     }
+
+    
+
+    // changeHandler = event => {
+    //   this.setState({[event.target.name]: event.target.value})
+    // }
+    
+    // handleSubmit (event) {
+    //   event.preventDefault();
+    //   console.log(event.target.value);
+    // }
   
     componentDidMount() {
       this.fetchApiData();
@@ -97,6 +109,10 @@ class AppContainer extends Component {
             city={this.state.city}
             temperature={this.state.temperature}
             changeCity={this.handleCityChange}
+            name={this.state.name}
+            email={this.state.email}
+            message={this.state.messagetext}
+            onSubmit={this.handleSubmit}
           />
                )
         }}
