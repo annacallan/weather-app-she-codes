@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Label = props => {
+const Label = ({ name, email, messageText,...props }) => {
     return <label>{props.children}</label>;
   };
 

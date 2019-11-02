@@ -21,7 +21,7 @@ const Forecast = ({ forecast, ...props }) => {
           {i === 1 && <h2>Upcoming:</h2>}
           <DailyWeather
             key={day[0].dt}
-            date={day[0].dt}
+            date={day[0].dt_txt}
             icon={day[0].weather[0].icon}
             maxTemp={getMaxTemp(day).main.temp}
             minTemp={getMinTemp(day).main.temp}

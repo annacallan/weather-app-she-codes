@@ -9,7 +9,7 @@ const HourlyWeather = ({ list, ...props }) => {
       {list.map(item => (
         <HourlyWeatherItem
           key={item.dt}
-          time={moment(item.dt).format('ha')}
+          time={moment(item.dt_txt).format('ha')}
           // time={item.dt}
           icon={item.weather[0].icon}
           maxTemp={item.main.temp_max}

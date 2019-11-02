@@ -1,11 +1,11 @@
 import React from 'react';
-import WeatherIcon from '../atoms/WeatherIcon';
+import Icon from '../atoms/Icon';
 
 const HourlyWeatherItem = ({ time, icon, maxTemp, ...props }) => {
   return (
     <li>
       <div>{time}</div>
-      <WeatherIcon icon={icon} />
+      <Icon icon={icon} />
       <div>{maxTemp}</div>
     </li>
   );
