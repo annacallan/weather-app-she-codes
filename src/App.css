@@ -5,68 +5,97 @@
     width: 400px;
 }
 
+.cityTitle {
+    padding-top: 20px;
+}
 .profilePic {
     border-radius: 5px 5px 5px 5px;
 }
 
-.currentWeatherClass {
-    border: solid 1px red;
+.DWBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.DWTitle {
+    font-size: 25pt;
+    margin: 0px;
+}
+
+.DWTempBlock {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30pt;
+}
+
+.cityPhotoContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.currentTemp {
+    font-size: 80pt;
+    text-shadow: 2px 2px grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .links :hover :active {
+    color: yellow;
+} */
+
+.textLinkClass, .buttonClass {
+    background-color: rgb(4, 65, 88);
+    border-radius: 8px;
+    color: white;
+    margin: 10px;
+}
+
+
+.forecastTitles h3 {
+    margin-block-end: 0;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.HWList ul {
+    display: flex;
+    /* flex-direction: column; */
+    padding-inline-start: 0px;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(9, 156, 156) ;
+    width: 100%;
+}
+
+.HWItem ul {
+    display: flex;
+    flex-direction: column;
 }
 
 .dailyWeatherClass {
-    border: solid 1px yellow;
+    display: flex;
+    justify-content: center;
 }
 
 .formClass {
-    border: solid 1px yellowgreen;
-    display: block;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
 }
 
-/* .profilePic {
-    width: 10%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 50px;
-    border: solid white;
-      border-width:6px 6px 60px 6px;
-      box-shadow:2px 2px 5px #333; 
-      -webkit-box-shadow:1px 1px 5px #333;
-      -moz-box-shadow:1px 1px 5px #333;
-      height:10px; 
-      width:10px;
-      font-family: "Marker Felt", sans-serif; 
-      text-decoration: none;
-      -webkit-transform: rotate(+5deg);
-      -moz-transform: rotate(+5deg);
-      color: black;
-      text-shadow: none;
-      border-radius: 5px;
-  }
-  
-  .polaroid:hover {
-      -webkit-transform: scale(1.20); 
-      -moz-transform: scale(1.20); 
-      -webkit-box-shadow: 0 8px 16px 0 black; 
-      -moz-box-shadow: 0 8px 16px black; 
-      position: relative; 
-      z-index: 5;
-  } */
+.icon{
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
 
-
-  /* .textLinkClass {                     
-    text-decoration: none;    
-    color: whitesmoke;                
-    background-color:#006161; 
-    font-weight: bold;
-    padding: 10px;
-    text-align: center;
-    border: 2px solid #5D6063;
-    border-radius: 5px;
-    width: 20px;
-    margin: auto;
-  }
-
-  .buttonClass {
-      color: yellow;
-      background-color: tomato;
-  } */
+.pageDivider {
+    height: 15px;
+    background-image: linear-gradient(to right, rgb(11, 73, 109) , rgb(53, 100, 145), rgb(7, 78, 66));
+}

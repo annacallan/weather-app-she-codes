@@ -1,13 +1,15 @@
 import React from 'react';
 import Icon from '../atoms/Icon';
 
-const HourlyWeatherItem = ({ time, icon, maxTemp, ...props }) => {
+const HourlyWeatherItem = ({ time, icon, maxTemp, timezone, ...props }) => {
   return (
-    <li>
-      <div>{time}</div>
+    <div className='HWItem'>
+    <ul>
+      <div>{time}{timezone}</div>
       <Icon icon={icon} />
       <div>{maxTemp}</div>
-    </li>
+    </ul>
+    </div>
   );
 };
 

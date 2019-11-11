@@ -1,7 +1,11 @@
 import React from 'react'
 
 const CurrentCity = ({city, ...props }) => {
-    return <h1>{city}</h1>;
+    return (
+    <div>
+      <h1 className='cityTitle'>{city}</h1>
+    </div>)
+
   };
   
 

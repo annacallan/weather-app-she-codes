@@ -43,7 +43,7 @@ class ComplaintForm extends Component {
       .then(response => response.json())
       .then(json => {
         console.log(json);
-        alert(`Thank you for submitting feedback to Weather Kitty ${this.state.name}`)
+        alert(`Thank you for submitting feedback to Weather Kitty, ${this.state.name}`)
         this.setState({ name: '', email: '', messageText: '', });
       })
     .catch(err => {
@@ -63,7 +63,7 @@ class ComplaintForm extends Component {
         <br></br>
         <FormField type="textarea" name="messageText" label="Message" value={this.state.messageText} onChange={this.changeHandler} />
         <br></br>
-        <Button type='submit' value='submit'>Submit</Button>
+        <Button className='textLinkClass' type='submit' value='submit'>Submit</Button>
       </form>
     </div>
     )

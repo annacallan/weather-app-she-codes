@@ -9,7 +9,7 @@ const ComplaintPage = ({ city, temperature, changeCity, handleSubmit, name, emai
   return (
     <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
       <Link to="/">
-        <TextLink>I changed my mind!</TextLink>
+        <TextLink>I've changed my mind!</TextLink>
       </Link>
       <WeatherPerson />
       <ComplaintForm onSubmit={handleSubmit} />

@@ -9,7 +9,7 @@ const KittyProfile = ({mood, photo, ...props}) => {
             <h2>Today's Cat Mood</h2>
             < KittyPic />
             < KittyMood />
-            <Link to="/">Back to the weather!</Link>
+            <Link to="/" style={{color: 'white',}}>Back to the weather!</Link>
         </div>
     )
 }

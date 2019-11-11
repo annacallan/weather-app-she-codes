@@ -7,9 +7,11 @@ const WeatherPage = ({ city, temperature, changeCity, forecast, ...props }) => {
   return (
     <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
       <Forecast forecast={forecast} />
-      <Link to="/complain">Complain about the weather!</Link>
-      <br></br>
-      <Link to="/catmood">Cat Forecast</Link>
+      <div className ='links'>
+        <Link to="/complain" style={{color: 'white',}}>Complain about the weather!</Link>
+        <br></br>
+        <Link to="/catmood" style={{color: 'white',}}>Cat Forecast</Link>
+      </div>
     </PageTemplate>
   );
 };

@@ -36,33 +36,41 @@ const Icon = ({icon}) => {
   switch(icon) {
     case '01d':
     case '01n':
-        return(<Sunny/>);
+        return(<div className='icon'>
+                <Sunny/>
+            </div>);
     case '02d':
     case '02n':
     case '03d':
     case '03n':
-        return (<PartiallyCloudy/>); 
+        return (<div className='icon'>
+        <PartiallyCloudy/>
+        </div>
+        );
     case '04d':
     case '04n':
-        return (<Cloudy/>);
+        return (<div className='icon'>
+            <Cloudy/>
+            </div>
+            );
     case '09d':
     case '09n':
-        return (<Drizzle/>); 
+        return (<div className='icon'><Drizzle/></div>); 
     case '10d':
     case '10n':
-        return (<RainyDay/>);
+        return (<div className='icon'><RainyDay/></div>);
     case '11d':
     case '11n':
-        return (<Lighting/>);     
+        return (<div className='icon'><Lighting/></div>);     
     case '13d':
     case '13n':
-        return (<Cold/>);
+        return (<div className='icon'><Cold/></div>);
     case '50d':
     case '50n':
-        return (<Mist/>);             
+        return (<div className='icon'><Mist/></div>);             
     default:
         console.log('icon passed', icon) 
-        return (<Rainbow/>); 
+        return (<div className='icon'><Rainbow/></div>); 
   }}
 
 export default Icon

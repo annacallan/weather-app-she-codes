@@ -4,7 +4,7 @@ import ComplaintPage from '../pages/ComplaintPage'
 import KittyPage from '../pages/KittyPage'
 import { Route } from 'react-router-dom';
 
-const CITIES = ['Perth', 'London', 'Paris', 'Tokyo', 'Sydney'];
+const CITIES = ['Perth', 'London', 'Paris', 'Tokyo', 'Sydney', 'Beijing',];
 
 const API_URL = 'https://api.openweathermap.org/data/2.5';
 
@@ -16,6 +16,7 @@ class AppContainer extends Component {
         city: CITIES[0],
         temperature: '',
         forecast: [],
+        timezone: '',
       };
   
       this.handleCityChange = this.handleCityChange.bind(this);
@@ -70,16 +71,6 @@ class AppContainer extends Component {
       });
     }
 
-    
-
-    // changeHandler = event => {
-    //   this.setState({[event.target.name]: event.target.value})
-    // }
-    
-    // handleSubmit (event) {
-    //   event.preventDefault();
-    //   console.log(event.target.value);
-    // }
   
     componentDidMount() {
       this.fetchApiData();
@@ -93,9 +84,10 @@ class AppContainer extends Component {
             return (
           <WeatherPage
             city={this.state.city}
-            temperature={this.state.temperature}
+            temperature={`${parseInt(this.state.temperature)}º`}
             forecast={this.state.forecast}
             changeCity={this.handleCityChange}
+            timezone={this.state.timezone}
           />
             )
         }}
@@ -107,7 +99,7 @@ class AppContainer extends Component {
                return(     
           <ComplaintPage
             city={this.state.city}
-            temperature={this.state.temperature}
+            temperature={`${parseInt(this.state.temperature)}º`}
             changeCity={this.handleCityChange}
             name={this.state.name}
             email={this.state.email}
